@@ -1,0 +1,17 @@
+@import 'scss/reset';
+@import 'scss/settings/font';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  #root {
+    max-width: 190rem;
+    font-family: $font-base;
+    margin: 0 auto;
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import 'src/scss/settings/mixins';
+
+.optinion {
+  height: 25rem;
+  margin-top: 5rem;
+  position: relative;
+  transition: 1s;
+  .visablePart {
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+  }
+  .hidder {
+    width: 100%;
+    height: 17rem;
+    position: absolute;
+    top: 8.5rem;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease;
+    @include backgroundGradient();
+    .customerName {
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+    }
+  }
+  .showInfo {
+    top: 16rem;
+    height: 5rem;
+    transform: rotateY(5rem);
+    transition: all 1s ease;
+  }
+}
+.animationContainer {
+  margin-top: 5rem;
+  .hidder {
+    top: 18rem;
+    min-height: 5rem;
+    transform: rotateY(5rem);
+    transition: all 1s ease;
+  }
+}
+
+@include tabletMax {
+  .optinion {
+    .hidder {
+      height: 20rem;
+    }
+    .showInfo {
+      height: 3rem;
+    }
+  }
+}
+
+@include mobile {
+  .optinion {
+    height: 20rem;
+    font-size: 1.7rem;
+    .visablePart {
+      height: 15rem;
+      margin-top: 1rem;
+    }
+    .hidder {
+      height: 18rem;
+      top: 9rem;
+      .customerName {
+        top: 1.5rem;
+        right: 10%;
+      }
+    }
+  }
+  .animationContainer {
+    height: 25rem;
+    .visablePart {
+      height: 15rem;
+      margin-top: 1rem;
+    }
+    .hidder {
+      top: 23.5rem;
+      height: 10rem;
+    }
+  }
+}
+
+@include mobileMin {
+  .optinion {
+    height: 35rem;
+    font-size: 1.7rem;
+    .visablePart {
+      height: 25rem;
+      margin-top: 1rem;
+    }
+    .hidder {
+      height: 27rem;
+      top: 14rem;
+      .customerName {
+        top: 4.5rem;
+        right: 10%;
+      }
+    }
+  }
+  .animationContainer {
+    height: 45rem;
+    .visablePart {
+      height: 15rem;
+      margin-top: 1rem;
+    }
+    .hidder {
+      top: 40.5rem;
+      height: 10rem;
+    }
+  }
+}

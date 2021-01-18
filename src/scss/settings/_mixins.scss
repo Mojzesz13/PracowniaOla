@@ -1,0 +1,118 @@
+@mixin borderBottom {
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px white;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+@mixin animation($keyName) {
+  animation-name: $keyName;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@mixin animationArrowOne() {
+  animation-name: arrowDown;
+  animation-duration: 0.85s;
+  @keyframes arrowDown {
+    0% {
+      width: 10%;
+    }
+    25% {
+      width: 9.1%;
+    }
+    50% {
+      width: 9.1%;
+    }
+    75% {
+      width: 9.5%;
+    }
+    100% {
+      width: 10%;
+    }
+  }
+}
+@mixin animationArrowTwo() {
+  animation-name: arrowUp;
+  animation-duration: 0.85s;
+  @keyframes arrowUp {
+    0% {
+      width: 10%;
+    }
+    25% {
+      width: 9.1%;
+    }
+    50% {
+      width: 9.1%;
+    }
+    75% {
+      width: 9.5%;
+    }
+    100% {
+      width: 10%;
+    }
+  }
+}
+@mixin backgroundGradient() {
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 95%,
+    transparent
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 95%,
+    transparent
+  );
+  background: -o-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 95%,
+    transparent
+  );
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 95%,
+    transparent
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 95%,
+    transparent
+  );
+}
+@mixin desktop() {
+  @media (max-width: 1450px) {
+    @content;
+  }
+}
+@mixin tabletMax() {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin tabletMin() {
+  @media (max-width: 921px) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin mobileMin() {
+  @media (max-width: 500px) {
+    @content;
+  }
+}

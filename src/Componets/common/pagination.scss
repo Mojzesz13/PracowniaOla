@@ -1,0 +1,24 @@
+.paginationContainer {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  .pagination {
+    .pageItem {
+      display: flex;
+      align-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      .pageLink {
+        text-decoration: none;
+        padding: 0.5rem 2rem;
+        color: black;
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+      &.active {
+        background-color: gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import 'src/scss/settings/mixins';
+
+.mobile {
+  display: none;
+}
+
+@include mobile {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}

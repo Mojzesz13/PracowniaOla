@@ -1,0 +1,68 @@
+@import 'src/scss/settings/mixins';
+
+.buttonContainer {
+  width: 50rem;
+  height: 10rem;
+  position: relative;
+  content: '';
+  .bottomLine {
+    width: 41.5%;
+    height: 0.1rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    background-color: black;
+    content: '';
+  }
+  .rightLine {
+    width: 41.5%;
+    left: 58.5%;
+  }
+  .arrow {
+    width: 10%;
+    height: 0.1rem;
+    position: absolute;
+    top: 50%;
+    display: block;
+    background-color: black;
+    transition: 1s;
+    @include animationArrowOne();
+  }
+  .leftArrow {
+    left: 41.4%;
+    transform: rotate(30deg);
+    transform-origin: left;
+  }
+  .rightArrow {
+    right: 41.4%;
+    transform: rotate(-30deg);
+    transform-origin: right;
+  }
+  .arrowLeftAction {
+    transform: rotate(-30deg);
+    @include animationArrowTwo();
+  }
+
+  .arrowRightAction {
+    transform: rotate(30deg);
+    @include animationArrowTwo();
+  }
+}
+
+@include tabletMax {
+  .buttonContainer {
+    width: 50%;
+  }
+}
+
+@include mobile {
+  .buttonContainer {
+    height: 8rem;
+    z-index: 100;
+    .rightLine {
+      width: 41.5%;
+      left: 58.5%;
+    }
+  }
+}

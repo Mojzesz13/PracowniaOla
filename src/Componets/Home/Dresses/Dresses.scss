@@ -1,0 +1,31 @@
+.DressesContainer {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .imgSection {
+    height: 65rem;
+    display: flex;
+    margin-top: 4%;
+    .dressesImg {
+      width: 80%;
+      height: 60rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &.first {
+        background: url('./../../../assets/weedingOpening.jpeg') center
+          no-repeat;
+        background-size: contain;
+      }
+      &.second {
+        background: url('./../../../assets/eveningOpening.jpeg') center
+          no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

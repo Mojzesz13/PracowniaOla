@@ -1,0 +1,61 @@
+@import 'src/scss/settings/mixins';
+@import 'src/scss/settings/font';
+
+.contactContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: $font-second;
+  font-size: 2rem;
+  .dataContainer {
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    .image {
+      min-width: 80%;
+      min-height: 35rem;
+      background-image: url(../../../assets/mapka.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    h1 {
+      margin: 2rem auto;
+      font-size: 3.5rem;
+      font-weight: 300;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    h3 {
+      margin-top: 2rem;
+      font-size: 3.5rem;
+    }
+    .decorateBar2 {
+      width: 80%;
+      border-bottom: 1px solid black;
+      margin: 2rem auto;
+    }
+    p:nth-child(7) {
+      margin-bottom: 3rem;
+    }
+    a:link {
+      color: black;
+      margin-bottom: 3rem;
+    }
+    .openingHour {
+      margin-top: 3rem;
+    }
+  }
+}
+
+@include mobile {
+  .contactContainer {
+    padding-top: 7.1rem;
+  }
+}

@@ -1,0 +1,89 @@
+@import 'src/scss/settings/font';
+@import 'src/scss/settings/mixins';
+
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  img {
+    width: 20rem;
+    height: 8rem;
+  }
+  .logoText {
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    font-weight: 300;
+    color: black;
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.3rem;
+    }
+    h2 {
+      font-size: 4rem;
+      margin-left: 2rem;
+    }
+  }
+}
+
+@include mobile {
+  .logoContainer {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 10rem;
+      height: 5.5rem;
+      @include animation(logoAni);
+      @keyframes logoAni {
+        from {
+          width: 0.2rem;
+          height: 0.08rem;
+          opacity: 0;
+        }
+        to {
+          width: 10rem;
+          height: 5.5rem;
+          opacity: 1;
+        }
+      }
+    }
+    .logoText {
+      margin-top: 3%;
+      display: block;
+      font-family: $font-second;
+      h1 {
+        font-size: 2.2rem;
+        line-height: 40%;
+        letter-spacing: 0.11rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        margin-left: 0;
+      }
+    }
+  }
+  .activeLogo {
+    img {
+      @include animation(logoAniTwo);
+      @keyframes logoAniTwo {
+        from {
+          width: 10rem;
+          height: 5.5rem;
+          opacity: 1;
+        }
+        to {
+          width: 0.2rem;
+          height: 0.08rem;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

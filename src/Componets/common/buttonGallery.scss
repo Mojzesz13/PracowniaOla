@@ -1,0 +1,35 @@
+@import 'src/scss/settings/font';
+
+.buttonGallery {
+  width: 22rem;
+  height: 5rem;
+  padding-top: 0.5rem;
+  position: relative;
+  text-align: center;
+  font-size: 3rem;
+  font-family: $font-second;
+  color: black;
+  .line {
+    width: 10%;
+    height: 0.1rem;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    background-color: black;
+  }
+  .horizontalOne {
+    width: 15%;
+    left: 10%;
+  }
+  .horizontalTwo {
+    width: 15%;
+  }
+  .arrowOne {
+    transform: rotate(30deg);
+    transform-origin: right;
+  }
+  .arrowTwo {
+    transform: rotate(-30deg);
+    transform-origin: right;
+  }
+}

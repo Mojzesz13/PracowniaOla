@@ -1,0 +1,196 @@
+@import 'src/scss/settings/mixins';
+
+.headerLinks {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  .navItem {
+    height: 6rem;
+    padding: 1.2rem 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    .navLinks {
+      padding: 1rem 2rem;
+      display: inline-block;
+      color: white;
+      i {
+        margin-left: 0.3rem;
+      }
+      &:focus {
+        outline: none;
+      }
+      @include borderBottom;
+    }
+  }
+}
+
+@include tabletMax {
+  .headerLinks {
+    .navItem {
+      .navLinks {
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .headerLinks {
+    width: 100%;
+    justify-content: normal;
+    .linkHolder {
+      width: 100%;
+      position: relative;
+      display: flex;
+      .navItem {
+        margin-bottom: 0;
+        position: absolute;
+        bottom: -4rem;
+        padding: 0;
+        align-items: center;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        img {
+          width: 4rem;
+          height: 4rem;
+          animation-duration: 1s;
+        }
+      }
+      .first {
+        bottom: 2rem;
+        left: -10rem;
+        animation-fill-mode: forwards;
+        @include animation(mymove1);
+        @keyframes mymove1 {
+          from {
+            left: 2rem;
+            opacity: 1;
+          }
+          to {
+            left: -10rem;
+            opacity: 0;
+          }
+        }
+      }
+      .second {
+        left: 15%;
+        animation: mymove2a 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove2a {
+          from {
+            left: 25%;
+          }
+          to {
+            left: 15%;
+          }
+        }
+      }
+      .third {
+        left: 35%;
+        animation: mymove3a 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove3a {
+          from {
+            left: 45%;
+          }
+          to {
+            left: 35%;
+          }
+        }
+      }
+      .forth {
+        left: 55%;
+        animation: mymove4a 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove4a {
+          from {
+            left: 65%;
+          }
+          to {
+            left: 55%;
+          }
+        }
+      }
+      .fifth {
+        left: 75%;
+        animation: mymove5a 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove5a {
+          from {
+            left: 85%;
+          }
+          to {
+            left: 75%;
+          }
+        }
+      }
+    }
+  }
+  .activeHeader {
+    .linkHolder {
+      .first {
+        left: 2rem;
+        animation: mymove1 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove1 {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+      .second {
+        animation: mymove2 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove2 {
+          from {
+            left: 15%;
+          }
+          to {
+            left: 25%;
+          }
+        }
+      }
+      .third {
+        animation: mymove3 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove3 {
+          from {
+            left: 35%;
+          }
+          to {
+            left: 45%;
+          }
+        }
+      }
+      .forth {
+        animation: mymove4 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove4 {
+          from {
+            left: 55%;
+          }
+          to {
+            left: 65%;
+          }
+        }
+      }
+      .fifth {
+        animation: mymove5 1s;
+        animation-fill-mode: forwards;
+        @keyframes mymove5 {
+          from {
+            left: 75%;
+          }
+          to {
+            left: 85%;
+          }
+        }
+      }
+    }
+  }
+}
