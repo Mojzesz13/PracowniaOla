@@ -12,7 +12,7 @@ const Lightbox = ({ imageData, id, title }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   let itemCount = imageData.length;
-  let pageSize = 12;
+  let pageSize = 8;
 
   const handleShowImage = (e) => {
     e.preventDefault();
@@ -68,10 +68,10 @@ const Lightbox = ({ imageData, id, title }) => {
 
   const card = imageData.map((obj, index) => {
     return (
-      <div className="cardContainer" key={index}>
+      <div className='cardContainer' key={index}>
         <img src={obj.image} id={index} alt={obj.title} />
-        <div className="cardInfo" id={index} onClick={handleShowImage}>
-          <h1 className="cardTitle">{obj.title}</h1>
+        <div className='cardInfo' id={index} onClick={handleShowImage}>
+          <h1 className='cardTitle'>{obj.title}</h1>
         </div>
       </div>
     );
@@ -81,7 +81,7 @@ const Lightbox = ({ imageData, id, title }) => {
 
   return (
     <>
-      <section className="cardHolder" id={id}>
+      <section className='cardHolder' id={id}>
         <DecorationBar title={title} />
         {gallery}
       </section>
@@ -93,15 +93,15 @@ const Lightbox = ({ imageData, id, title }) => {
         prevPage={handlePrevPage}
         nextPage={handleNextPage}
       />
-      <section className="lightbox" style={dispImgStyle}>
-        <div className="carousel left" onClick={handlePrevShow}>
+      <section className='lightbox' style={dispImgStyle}>
+        <div className='carousel left' onClick={handlePrevShow}>
           <span></span>
           <span></span>
         </div>
-        <div className="imgHolder" onClick={handleClose}>
+        <div className='imgHolder' onClick={handleClose}>
           <img src={dispImg} alt={dispImg} onClick={handleClose} />
         </div>
-        <div className="carousel right" onClick={handleNextShow}>
+        <div className='carousel right' onClick={handleNextShow}>
           <span></span>
           <span></span>
         </div>
