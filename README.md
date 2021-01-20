@@ -20,4 +20,4 @@ Technologies
 DEMO
 --------------
  
-[Pracownia_Ola](https://github.com/Mojzesz13/PracowniaOla)
+[Pracownia_Ola](https://mojzesz13.github.io/PracowniaOla/#/)
